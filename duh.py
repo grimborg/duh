@@ -53,6 +53,10 @@ def duh():
     the output by size.
 
     """
+    if len(sys.argv) > 1 and sys.argv[1] in ['-h', '--help']:
+        print "Usage: duh [parameters to pass to du]."
+        print "Run du -h with any extra parameters and sort the output by size.\n"
+        return
     file_sizes = size_sort(get_sizes(sys.argv[1:]))
     for filename, size in file_sizes:
         print size, "\t", filename

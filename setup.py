@@ -17,7 +17,7 @@ setup(
     description = 'Human and sorted output for du',
     long_description = read('README.rst'),
     license = 'http://www.gnu.org/licenses/gpl-2.0.html',
-    version = '1.01',
+    version = '1.02',
     author = 'Oscar Vilaplana',
     author_email = 'dev@oscarvilaplana.cat',
     url = 'https://github.com/grimborg/duh',
