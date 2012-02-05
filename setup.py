@@ -14,7 +14,7 @@ def read(fname):
 
 setup(
     name = 'duh',
-    description = 'Human output for du',
+    description = 'Human and sorted output for du',
     long_description = read('README.rst'),
     license = 'http://www.gnu.org/licenses/gpl-2.0.html',
     version = '1.00',
