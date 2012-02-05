@@ -18,8 +18,8 @@ def get_sizes(args=None):
     :returns: A list of tuples (filename, size).
 
     """
-    command = " ".join(["du", "-h"] + (args if args else []))
-    process = Popen(command, stdout=PIPE, shell=True)
+    command = ["du", "-h"] + (args if args else [])
+    process = Popen(command, stdout=PIPE)
     output = process.stdout.read()
     lines = output.split("\n")
     regex = re.compile("^\s*(\S+)\s+(.*)")
@@ -55,7 +55,7 @@ def duh():
     """
     if len(sys.argv) > 1 and sys.argv[1] in ['-h', '--help']:
         print "Usage: duh [parameters to pass to du]."
-        print "Run du -h with any extra parameters and sort the output by size.\n"
+        print "Run du -h with any extra parameters and sort by size.\n"
         return
     file_sizes = size_sort(get_sizes(sys.argv[1:]))
     for filename, size in file_sizes:
